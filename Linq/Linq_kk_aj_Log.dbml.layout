@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Linq_kk_aj_Log">
+  <DataContextMoniker Name="/Linq_kk_aj_LogDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0fce4677-6bf6-4d7f-9264-66176726411a" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01ee4e8f-e9dd-42cb-8fa6-25e5f8c53b17" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
