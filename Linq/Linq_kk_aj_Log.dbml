@@ -12,4 +12,10 @@
       <Column Name="currenttimestamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
     </Type>
   </Table>
+  <Table Name="dbo.kk_aj_tbl_Arrangemang" Member="kk_aj_tbl_Arrangemangs">
+    <Type Name="kk_aj_tbl_Arrangemang">
+      <Column Name="arrid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Rubrik" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

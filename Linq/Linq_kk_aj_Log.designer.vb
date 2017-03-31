@@ -37,6 +37,12 @@ Partial Public Class Linq_kk_aj_LogDataContext
     End Sub
   Partial Private Sub Deletekk_aj_tbl_Log(instance As kk_aj_tbl_Log)
     End Sub
+  Partial Private Sub Insertkk_aj_tbl_Arrangemang(instance As kk_aj_tbl_Arrangemang)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_Arrangemang(instance As kk_aj_tbl_Arrangemang)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_Arrangemang(instance As kk_aj_tbl_Arrangemang)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -67,6 +73,12 @@ Partial Public Class Linq_kk_aj_LogDataContext
 	Public ReadOnly Property kk_aj_tbl_Logs() As System.Data.Linq.Table(Of kk_aj_tbl_Log)
 		Get
 			Return Me.GetTable(Of kk_aj_tbl_Log)
+		End Get
+	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_Arrangemangs() As System.Data.Linq.Table(Of kk_aj_tbl_Arrangemang)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_Arrangemang)
 		End Get
 	End Property
 End Class
@@ -264,6 +276,90 @@ Partial Public Class kk_aj_tbl_Log
 				Me._currenttimestamp = value
 				Me.SendPropertyChanged("currenttimestamp")
 				Me.OncurrenttimestampChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_Arrangemang")>  _
+Partial Public Class kk_aj_tbl_Arrangemang
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _arrid As Integer
+	
+	Private _Rubrik As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnarridChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnarridChanged()
+    End Sub
+    Partial Private Sub OnRubrikChanging(value As String)
+    End Sub
+    Partial Private Sub OnRubrikChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrid", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property arrid() As Integer
+		Get
+			Return Me._arrid
+		End Get
+		Set
+			If ((Me._arrid = value)  _
+						= false) Then
+				Me.OnarridChanging(value)
+				Me.SendPropertyChanging
+				Me._arrid = value
+				Me.SendPropertyChanged("arrid")
+				Me.OnarridChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
+	Public Property Rubrik() As String
+		Get
+			Return Me._Rubrik
+		End Get
+		Set
+			If (String.Equals(Me._Rubrik, value) = false) Then
+				Me.OnRubrikChanging(value)
+				Me.SendPropertyChanging
+				Me._Rubrik = value
+				Me.SendPropertyChanged("Rubrik")
+				Me.OnRubrikChanged
 			End If
 		End Set
 	End Property

@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KulturkatalogenLog", "KulturkatalogenLog.vbproj", "{637BFD6B-FE95-4117-9FAE-9F62A00D3BC0}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KulturkatalogenlogTEST", "KulturkatalogenlogTEST\KulturkatalogenlogTEST.vbproj", "{9C51FBA3-E795-4E25-B630-2B98031978E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{637BFD6B-FE95-4117-9FAE-9F62A00D3BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{637BFD6B-FE95-4117-9FAE-9F62A00D3BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{637BFD6B-FE95-4117-9FAE-9F62A00D3BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C51FBA3-E795-4E25-B630-2B98031978E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C51FBA3-E795-4E25-B630-2B98031978E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C51FBA3-E795-4E25-B630-2B98031978E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C51FBA3-E795-4E25-B630-2B98031978E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

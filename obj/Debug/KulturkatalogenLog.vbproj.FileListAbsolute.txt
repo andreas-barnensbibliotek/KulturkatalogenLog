@@ -1,0 +1,9 @@
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenLog.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenLog.dll
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenLog.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenLog.xml
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.Resources.resources
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.dll
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.xml
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.pdb

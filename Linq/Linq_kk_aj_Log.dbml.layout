@@ -8,5 +8,11 @@
         <elementListCompartment Id="01ee4e8f-e9dd-42cb-8fa6-25e5f8c53b17" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="b9218aee-7e5e-43a8-86af-52716674ae7e" absoluteBounds="0.625, 3.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_Arrangemang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18d9106a-4db8-4f25-a095-770f062e807f" absoluteBounds="0.64000000000000012, 3.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
