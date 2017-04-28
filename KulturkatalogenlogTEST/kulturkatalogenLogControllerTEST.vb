@@ -8,10 +8,10 @@ Imports KulturkatalogenLog
 
         Dim testobj As logInfo = New logInfo
 
-        testobj.logtyp = 1
+        testobj.logtypid = 1
         testobj.Arrid = 1
-        testobj.Status = 1
-        testobj.Beskrivning = "inkommet Systemevent"
+        testobj.Statustypid = 4
+        testobj.Beskrivning = "godkänt och klart"
         testobj.ChangebyUserid = 2
 
         Dim cont As kulturkatalogLogController = New kulturkatalogLogController
@@ -25,9 +25,9 @@ Imports KulturkatalogenLog
 
         Dim testobj As logInfo = New logInfo
 
-        testobj.logtyp = 1
+        testobj.logtypid = 1
         testobj.Arrid = 1
-        testobj.Status = 1
+        testobj.Statustypid = 4
         testobj.Beskrivning = "inkommet Systemevent"
         testobj.ChangebyUserid = 2
 

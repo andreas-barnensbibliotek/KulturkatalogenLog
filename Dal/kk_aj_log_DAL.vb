@@ -9,52 +9,34 @@ Imports KulturkatalogenLog
 Public Class kk_aj_log_DAL
 
     Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-
+    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
     'Private _connectionString As String = ConfigurationManager.AppSettings("SiteSqlServer") 'sätt en hänvisning till connectionstring i webconfig
     Private _linqObj As New Linq_kk_aj_LogDataContext(_connectionString)
 
 #Region "Skrivboken CRUD funktioner"
 
-    Public Function getlogbyarrid(arrid As Integer) As List(Of logInfo)
+    Public Function getannonslog(proctyp As Integer, logtypid As Integer) As List(Of logInfo)
 
         Dim tmpobj As New List(Of logInfo)
-        Dim logs = From t In _linqObj.kk_aj_tbl_Logs
-                   Where t.arrid = arrid
-                   Select t
-                   Order By t.datum Descending
+        Dim logs = From p In _linqObj.kk_aj_proc_getlog(proctyp, logtypid)
+                   Select p
 
         For Each t In logs
             Dim nobj As New logInfo
             nobj.logid = t.logid
+            nobj.logtypid = t.logtypid
             nobj.logtyp = t.logtyp
-            nobj.Arrid = t.arrid
-            nobj.Status = t.status
+            Dim arrobj As arrangemangInfo = getarrdata(t.arrid)
+            nobj.Arrid = arrobj.Arrid
+            nobj.Arrrubrik = arrobj.Rubrik
+            nobj.Arrutovare = "to set"
+            nobj.Statustypid = t.statusid
+            nobj.ChangebyUserid = t.changebyuserid
+            nobj.ChangebyUsernamn = getusername(t.changebyuserid)
+            nobj.Statustyp = t.statustyp
             nobj.Datum = t.datum
             nobj.Beskrivning = t.beskrivning
-            nobj.LogArrangemang = getarrdata(arrid)
-            tmpobj.Add(nobj)
-        Next
 
-        Return tmpobj
-    End Function
-
-    Public Function getlogbylogtyp(logtyp As Integer) As List(Of logInfo)
-
-        Dim tmpobj As New List(Of logInfo)
-        Dim logs = From t In _linqObj.kk_aj_tbl_Logs
-                   Where t.logtyp = logtyp
-                   Select t
-                   Order By t.datum Descending
-
-        For Each t In logs
-            Dim nobj As New logInfo
-            nobj.logid = t.logid
-            nobj.logtyp = t.logtyp
-            nobj.Arrid = t.arrid
-            nobj.Status = t.status
-            nobj.Datum = t.datum
-            nobj.Beskrivning = t.beskrivning
-            nobj.LogArrangemang = New arrangemangInfo
             tmpobj.Add(nobj)
         Next
 
@@ -69,13 +51,26 @@ Public Class kk_aj_log_DAL
                    Select t
 
         For Each t In logs
-            tmpobj.Arrid = t.arrid
-            tmpobj.Rubrik = t.Rubrik
+            tmpobj.Arrid = t.ArrID
         Next
         Return tmpobj
 
     End Function
 
+
+    Private Function getusername(userid As Integer) As String
+        Dim tmpobj As String = ""
+
+        Dim logs = From t In _linqObj.Users
+                   Where t.UserID = userid
+                   Select t
+
+        For Each t In logs
+            tmpobj = t.Username
+        Next
+        Return tmpobj
+
+    End Function
 
 #Region "CRUD FUNCTIONS"
 
@@ -83,9 +78,9 @@ Public Class kk_aj_log_DAL
         Dim Inlagd As Boolean = False
         Try
             Dim newobj As New kk_aj_tbl_Log
-            newobj.logtyp = logobj.logtyp
+            newobj.logtypid = logobj.logtypid
             newobj.arrid = logobj.Arrid
-            newobj.status = logobj.Status
+            newobj.statusid = logobj.Statustypid
             newobj.beskrivning = logobj.Beskrivning
             newobj.datum = logobj.Datum
             newobj.changebyuserid = logobj.ChangebyUserid

@@ -2,16 +2,40 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Linq_kk_aj_Log">
   <DataContextMoniker Name="/Linq_kk_aj_LogDataContext" />
   <nestedChildShapes>
-    <classShape Id="0fce4677-6bf6-4d7f-9264-66176726411a" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+    <classShape Id="d7a5849c-5ddb-451a-862b-bf88c80cfe7d" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
       <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_Log" />
       <nestedChildShapes>
-        <elementListCompartment Id="01ee4e8f-e9dd-42cb-8fa6-25e5f8c53b17" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c7a96233-ffb8-4908-9843-83d759e2bb3c" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b9218aee-7e5e-43a8-86af-52716674ae7e" absoluteBounds="0.625, 3.5, 2, 1.1939925130208333">
+    <classShape Id="e0b99c6d-260e-441a-a77e-b43a6e4ca8c3" absoluteBounds="0.5, 3.25, 2, 2.7324039713541666">
       <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_Arrangemang" />
       <nestedChildShapes>
-        <elementListCompartment Id="18d9106a-4db8-4f25-a095-770f062e807f" absoluteBounds="0.64000000000000012, 3.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4e1895be-df14-4177-8c96-b5d719d4ed89" absoluteBounds="0.51500000000000012, 3.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6045a09-2462-45ce-a90d-cf63966785db" absoluteBounds="2.75, 4.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_arridtoContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9132abcb-91e8-4d8f-bfd0-25ce066ac663" absoluteBounds="2.765, 5.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="921f858d-6da3-4b66-8093-22ed75e684cd" absoluteBounds="2.75, 0.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_content" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27c4734d-3172-495d-afac-fe040be9de44" absoluteBounds="2.7649999999999997, 1.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="937d120a-f650-4178-b9b2-e40678ee2714" absoluteBounds="4.875, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_fakta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="135caf5d-1319-4f09-bfc2-bbebaf8fc2f6" absoluteBounds="4.89, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f5caa73-6533-4238-90c1-614b4d65e746" absoluteBounds="5, 2.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76315770-12ca-40bc-bc44-27ae8784d161" absoluteBounds="5.015, 2.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

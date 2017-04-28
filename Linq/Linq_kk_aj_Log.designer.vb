@@ -43,6 +43,30 @@ Partial Public Class Linq_kk_aj_LogDataContext
     End Sub
   Partial Private Sub Deletekk_aj_tbl_Arrangemang(instance As kk_aj_tbl_Arrangemang)
     End Sub
+  Partial Private Sub Insertkk_aj_tbl_arridtoContent(instance As kk_aj_tbl_arridtoContent)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_arridtoContent(instance As kk_aj_tbl_arridtoContent)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_arridtoContent(instance As kk_aj_tbl_arridtoContent)
+    End Sub
+  Partial Private Sub Insertkk_aj_tbl_content(instance As kk_aj_tbl_content)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_content(instance As kk_aj_tbl_content)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_content(instance As kk_aj_tbl_content)
+    End Sub
+  Partial Private Sub Insertkk_aj_tbl_fakta(instance As kk_aj_tbl_fakta)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_fakta(instance As kk_aj_tbl_fakta)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_fakta(instance As kk_aj_tbl_fakta)
+    End Sub
+  Partial Private Sub InsertUser(instance As User)
+    End Sub
+  Partial Private Sub UpdateUser(instance As User)
+    End Sub
+  Partial Private Sub DeleteUser(instance As User)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -81,6 +105,48 @@ Partial Public Class Linq_kk_aj_LogDataContext
 			Return Me.GetTable(Of kk_aj_tbl_Arrangemang)
 		End Get
 	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_arridtoContents() As System.Data.Linq.Table(Of kk_aj_tbl_arridtoContent)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_arridtoContent)
+		End Get
+	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_contents() As System.Data.Linq.Table(Of kk_aj_tbl_content)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_content)
+		End Get
+	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_faktas() As System.Data.Linq.Table(Of kk_aj_tbl_fakta)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_fakta)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Users() As System.Data.Linq.Table(Of User)
+		Get
+			Return Me.GetTable(Of User)
+		End Get
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_GetArrby_ArrStatus")>  _
+	Public Function kk_aj_proc_GetArrby_ArrStatus(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal arrStatusTyp As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal rolltypAdmin As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll1 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll2 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll3 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll4 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll5 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll6 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll7 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll8 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll9 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll10 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(4)")> ByVal visningsperiod As String) As ISingleResult(Of kk_aj_proc_GetArrby_ArrStatusResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), arrStatusTyp, rolltypAdmin, roll1, roll2, roll3, roll4, roll5, roll6, roll7, roll8, roll9, roll10, visningsperiod)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_GetArrby_ArrStatusResult))
+	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_GetArrby_Search")>  _
+	Public Function kk_aj_proc_GetArrby_Search(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(500)")> ByVal searchval As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal arrStatusTyp As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal rolltypAdmin As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll1 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll2 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll3 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll4 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll5 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll6 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll7 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll8 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll9 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal roll10 As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(4)")> ByVal visningsperiod As String) As ISingleResult(Of kk_aj_proc_GetArrby_SearchResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), searchval, arrStatusTyp, rolltypAdmin, roll1, roll2, roll3, roll4, roll5, roll6, roll7, roll8, roll9, roll10, visningsperiod)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_GetArrby_SearchResult))
+	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_getlog")>  _
+	Public Function kk_aj_proc_getlog(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal id As System.Nullable(Of Integer)) As ISingleResult(Of kk_aj_proc_getlogResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, id)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_getlogResult))
+	End Function
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_Log")>  _
@@ -91,7 +157,7 @@ Partial Public Class kk_aj_tbl_Log
 	
 	Private _logid As Integer
 	
-	Private _logtyp As System.Nullable(Of Integer)
+	Private _logtypid As System.Nullable(Of Integer)
 	
 	Private _arrid As System.Nullable(Of Integer)
 	
@@ -99,7 +165,7 @@ Partial Public Class kk_aj_tbl_Log
 	
 	Private _datum As System.Nullable(Of Date)
 	
-	Private _status As System.Nullable(Of Integer)
+	Private _statusid As System.Nullable(Of Integer)
 	
 	Private _changebyuserid As System.Nullable(Of Integer)
 	
@@ -116,9 +182,9 @@ Partial Public Class kk_aj_tbl_Log
     End Sub
     Partial Private Sub OnlogidChanged()
     End Sub
-    Partial Private Sub OnlogtypChanging(value As System.Nullable(Of Integer))
+    Partial Private Sub OnlogtypidChanging(value As System.Nullable(Of Integer))
     End Sub
-    Partial Private Sub OnlogtypChanged()
+    Partial Private Sub OnlogtypidChanged()
     End Sub
     Partial Private Sub OnarridChanging(value As System.Nullable(Of Integer))
     End Sub
@@ -132,9 +198,9 @@ Partial Public Class kk_aj_tbl_Log
     End Sub
     Partial Private Sub OndatumChanged()
     End Sub
-    Partial Private Sub OnstatusChanging(value As System.Nullable(Of Integer))
+    Partial Private Sub OnstatusidChanging(value As System.Nullable(Of Integer))
     End Sub
-    Partial Private Sub OnstatusChanged()
+    Partial Private Sub OnstatusidChanged()
     End Sub
     Partial Private Sub OnchangebyuseridChanging(value As System.Nullable(Of Integer))
     End Sub
@@ -168,18 +234,18 @@ Partial Public Class kk_aj_tbl_Log
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_logtyp", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property logtyp() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_logtypid", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property logtypid() As System.Nullable(Of Integer)
 		Get
-			Return Me._logtyp
+			Return Me._logtypid
 		End Get
 		Set
-			If (Me._logtyp.Equals(value) = false) Then
-				Me.OnlogtypChanging(value)
+			If (Me._logtypid.Equals(value) = false) Then
+				Me.OnlogtypidChanging(value)
 				Me.SendPropertyChanging
-				Me._logtyp = value
-				Me.SendPropertyChanged("logtyp")
-				Me.OnlogtypChanged
+				Me._logtypid = value
+				Me.SendPropertyChanged("logtypid")
+				Me.OnlogtypidChanged
 			End If
 		End Set
 	End Property
@@ -232,18 +298,18 @@ Partial Public Class kk_aj_tbl_Log
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property status() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_statusid", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property statusid() As System.Nullable(Of Integer)
 		Get
-			Return Me._status
+			Return Me._statusid
 		End Get
 		Set
-			If (Me._status.Equals(value) = false) Then
-				Me.OnstatusChanging(value)
+			If (Me._statusid.Equals(value) = false) Then
+				Me.OnstatusidChanging(value)
 				Me.SendPropertyChanging
-				Me._status = value
-				Me.SendPropertyChanged("status")
-				Me.OnstatusChanged
+				Me._statusid = value
+				Me.SendPropertyChanged("statusid")
+				Me.OnstatusidChanged
 			End If
 		End Set
 	End Property
@@ -305,9 +371,25 @@ Partial Public Class kk_aj_tbl_Arrangemang
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _arrid As Integer
+	Private _ArrID As Integer
 	
-	Private _Rubrik As String
+	Private _ArrangemangstypID As System.Nullable(Of Integer)
+	
+	Private _KonstformID As System.Nullable(Of Integer)
+	
+	Private _UtovarID As System.Nullable(Of Integer)
+	
+	Private _AdminuserID As System.Nullable(Of Integer)
+	
+	Private _ArrangemangStatusID As System.Nullable(Of Integer)
+	
+	Private _Datum As System.Nullable(Of Date)
+	
+	Private _Publicerad As String
+	
+	Private _LookedAt As String
+	
+	Private _VisningsPeriod As String
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -316,13 +398,45 @@ Partial Public Class kk_aj_tbl_Arrangemang
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub OnarridChanging(value As Integer)
+    Partial Private Sub OnArrIDChanging(value As Integer)
     End Sub
-    Partial Private Sub OnarridChanged()
+    Partial Private Sub OnArrIDChanged()
     End Sub
-    Partial Private Sub OnRubrikChanging(value As String)
+    Partial Private Sub OnArrangemangstypIDChanging(value As System.Nullable(Of Integer))
     End Sub
-    Partial Private Sub OnRubrikChanged()
+    Partial Private Sub OnArrangemangstypIDChanged()
+    End Sub
+    Partial Private Sub OnKonstformIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnKonstformIDChanged()
+    End Sub
+    Partial Private Sub OnUtovarIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnUtovarIDChanged()
+    End Sub
+    Partial Private Sub OnAdminuserIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnAdminuserIDChanged()
+    End Sub
+    Partial Private Sub OnArrangemangStatusIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnArrangemangStatusIDChanged()
+    End Sub
+    Partial Private Sub OnDatumChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnDatumChanged()
+    End Sub
+    Partial Private Sub OnPubliceradChanging(value As String)
+    End Sub
+    Partial Private Sub OnPubliceradChanged()
+    End Sub
+    Partial Private Sub OnLookedAtChanging(value As String)
+    End Sub
+    Partial Private Sub OnLookedAtChanged()
+    End Sub
+    Partial Private Sub OnVisningsPeriodChanging(value As String)
+    End Sub
+    Partial Private Sub OnVisningsPeriodChanged()
     End Sub
     #End Region
 	
@@ -331,35 +445,163 @@ Partial Public Class kk_aj_tbl_Arrangemang
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrid", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property arrid() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property ArrID() As Integer
 		Get
-			Return Me._arrid
+			Return Me._ArrID
 		End Get
 		Set
-			If ((Me._arrid = value)  _
+			If ((Me._ArrID = value)  _
 						= false) Then
-				Me.OnarridChanging(value)
+				Me.OnArrIDChanging(value)
 				Me.SendPropertyChanging
-				Me._arrid = value
-				Me.SendPropertyChanged("arrid")
-				Me.OnarridChanged
+				Me._ArrID = value
+				Me.SendPropertyChanged("ArrID")
+				Me.OnArrIDChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
-	Public Property Rubrik() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrangemangstypID", DbType:="Int")>  _
+	Public Property ArrangemangstypID() As System.Nullable(Of Integer)
 		Get
-			Return Me._Rubrik
+			Return Me._ArrangemangstypID
 		End Get
 		Set
-			If (String.Equals(Me._Rubrik, value) = false) Then
-				Me.OnRubrikChanging(value)
+			If (Me._ArrangemangstypID.Equals(value) = false) Then
+				Me.OnArrangemangstypIDChanging(value)
 				Me.SendPropertyChanging
-				Me._Rubrik = value
-				Me.SendPropertyChanged("Rubrik")
-				Me.OnRubrikChanged
+				Me._ArrangemangstypID = value
+				Me.SendPropertyChanged("ArrangemangstypID")
+				Me.OnArrangemangstypIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_KonstformID", DbType:="Int")>  _
+	Public Property KonstformID() As System.Nullable(Of Integer)
+		Get
+			Return Me._KonstformID
+		End Get
+		Set
+			If (Me._KonstformID.Equals(value) = false) Then
+				Me.OnKonstformIDChanging(value)
+				Me.SendPropertyChanging
+				Me._KonstformID = value
+				Me.SendPropertyChanged("KonstformID")
+				Me.OnKonstformIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UtovarID", DbType:="Int")>  _
+	Public Property UtovarID() As System.Nullable(Of Integer)
+		Get
+			Return Me._UtovarID
+		End Get
+		Set
+			If (Me._UtovarID.Equals(value) = false) Then
+				Me.OnUtovarIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UtovarID = value
+				Me.SendPropertyChanged("UtovarID")
+				Me.OnUtovarIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_AdminuserID", DbType:="Int")>  _
+	Public Property AdminuserID() As System.Nullable(Of Integer)
+		Get
+			Return Me._AdminuserID
+		End Get
+		Set
+			If (Me._AdminuserID.Equals(value) = false) Then
+				Me.OnAdminuserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._AdminuserID = value
+				Me.SendPropertyChanged("AdminuserID")
+				Me.OnAdminuserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrangemangStatusID", DbType:="Int")>  _
+	Public Property ArrangemangStatusID() As System.Nullable(Of Integer)
+		Get
+			Return Me._ArrangemangStatusID
+		End Get
+		Set
+			If (Me._ArrangemangStatusID.Equals(value) = false) Then
+				Me.OnArrangemangStatusIDChanging(value)
+				Me.SendPropertyChanging
+				Me._ArrangemangStatusID = value
+				Me.SendPropertyChanged("ArrangemangStatusID")
+				Me.OnArrangemangStatusIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Datum", DbType:="DateTime")>  _
+	Public Property Datum() As System.Nullable(Of Date)
+		Get
+			Return Me._Datum
+		End Get
+		Set
+			If (Me._Datum.Equals(value) = false) Then
+				Me.OnDatumChanging(value)
+				Me.SendPropertyChanging
+				Me._Datum = value
+				Me.SendPropertyChanged("Datum")
+				Me.OnDatumChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Publicerad", DbType:="NVarChar(10)")>  _
+	Public Property Publicerad() As String
+		Get
+			Return Me._Publicerad
+		End Get
+		Set
+			If (String.Equals(Me._Publicerad, value) = false) Then
+				Me.OnPubliceradChanging(value)
+				Me.SendPropertyChanging
+				Me._Publicerad = value
+				Me.SendPropertyChanged("Publicerad")
+				Me.OnPubliceradChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LookedAt", DbType:="NVarChar(10)")>  _
+	Public Property LookedAt() As String
+		Get
+			Return Me._LookedAt
+		End Get
+		Set
+			If (String.Equals(Me._LookedAt, value) = false) Then
+				Me.OnLookedAtChanging(value)
+				Me.SendPropertyChanging
+				Me._LookedAt = value
+				Me.SendPropertyChanged("LookedAt")
+				Me.OnLookedAtChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_VisningsPeriod", DbType:="NVarChar(10)")>  _
+	Public Property VisningsPeriod() As String
+		Get
+			Return Me._VisningsPeriod
+		End Get
+		Set
+			If (String.Equals(Me._VisningsPeriod, value) = false) Then
+				Me.OnVisningsPeriodChanging(value)
+				Me.SendPropertyChanging
+				Me._VisningsPeriod = value
+				Me.SendPropertyChanged("VisningsPeriod")
+				Me.OnVisningsPeriodChanged
 			End If
 		End Set
 	End Property
@@ -381,4 +623,1549 @@ Partial Public Class kk_aj_tbl_Arrangemang
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
 	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_arridtoContent")>  _
+Partial Public Class kk_aj_tbl_arridtoContent
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _id As Integer
+	
+	Private _arrid As System.Nullable(Of Integer)
+	
+	Private _contentid As System.Nullable(Of Integer)
+	
+	Private _Version As System.Nullable(Of Integer)
+	
+	Private _datum As System.Nullable(Of Date)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnidChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnidChanged()
+    End Sub
+    Partial Private Sub OnarridChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnarridChanged()
+    End Sub
+    Partial Private Sub OncontentidChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OncontentidChanged()
+    End Sub
+    Partial Private Sub OnVersionChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnVersionChanged()
+    End Sub
+    Partial Private Sub OndatumChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OndatumChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property id() As Integer
+		Get
+			Return Me._id
+		End Get
+		Set
+			If ((Me._id = value)  _
+						= false) Then
+				Me.OnidChanging(value)
+				Me.SendPropertyChanging
+				Me._id = value
+				Me.SendPropertyChanged("id")
+				Me.OnidChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrid", DbType:="Int")>  _
+	Public Property arrid() As System.Nullable(Of Integer)
+		Get
+			Return Me._arrid
+		End Get
+		Set
+			If (Me._arrid.Equals(value) = false) Then
+				Me.OnarridChanging(value)
+				Me.SendPropertyChanging
+				Me._arrid = value
+				Me.SendPropertyChanged("arrid")
+				Me.OnarridChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_contentid", DbType:="Int")>  _
+	Public Property contentid() As System.Nullable(Of Integer)
+		Get
+			Return Me._contentid
+		End Get
+		Set
+			If (Me._contentid.Equals(value) = false) Then
+				Me.OncontentidChanging(value)
+				Me.SendPropertyChanging
+				Me._contentid = value
+				Me.SendPropertyChanged("contentid")
+				Me.OncontentidChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Version", DbType:="Int")>  _
+	Public Property Version() As System.Nullable(Of Integer)
+		Get
+			Return Me._Version
+		End Get
+		Set
+			If (Me._Version.Equals(value) = false) Then
+				Me.OnVersionChanging(value)
+				Me.SendPropertyChanging
+				Me._Version = value
+				Me.SendPropertyChanged("Version")
+				Me.OnVersionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_datum", DbType:="DateTime")>  _
+	Public Property datum() As System.Nullable(Of Date)
+		Get
+			Return Me._datum
+		End Get
+		Set
+			If (Me._datum.Equals(value) = false) Then
+				Me.OndatumChanging(value)
+				Me.SendPropertyChanging
+				Me._datum = value
+				Me.SendPropertyChanged("datum")
+				Me.OndatumChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_content")>  _
+Partial Public Class kk_aj_tbl_content
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _Contentid As Integer
+	
+	Private _Rubrik As String
+	
+	Private _Underrubrik As String
+	
+	Private _ContentText As String
+	
+	Private _ImageUrl As String
+	
+	Private _ImageFilename As String
+	
+	Private _ImageSize As String
+	
+	Private _ImageAlt As String
+	
+	Private _ImageFotograf As String
+	
+	Private _MovieClipUrl As String
+	
+	Private _MovieClipFilename As String
+	
+	Private _MovieClipSize As String
+	
+	Private _MovieClipAlt As String
+	
+	Private _MovieClipCredits As String
+	
+	Private _datum As System.Nullable(Of Date)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnContentidChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnContentidChanged()
+    End Sub
+    Partial Private Sub OnRubrikChanging(value As String)
+    End Sub
+    Partial Private Sub OnRubrikChanged()
+    End Sub
+    Partial Private Sub OnUnderrubrikChanging(value As String)
+    End Sub
+    Partial Private Sub OnUnderrubrikChanged()
+    End Sub
+    Partial Private Sub OnContentTextChanging(value As String)
+    End Sub
+    Partial Private Sub OnContentTextChanged()
+    End Sub
+    Partial Private Sub OnImageUrlChanging(value As String)
+    End Sub
+    Partial Private Sub OnImageUrlChanged()
+    End Sub
+    Partial Private Sub OnImageFilenameChanging(value As String)
+    End Sub
+    Partial Private Sub OnImageFilenameChanged()
+    End Sub
+    Partial Private Sub OnImageSizeChanging(value As String)
+    End Sub
+    Partial Private Sub OnImageSizeChanged()
+    End Sub
+    Partial Private Sub OnImageAltChanging(value As String)
+    End Sub
+    Partial Private Sub OnImageAltChanged()
+    End Sub
+    Partial Private Sub OnImageFotografChanging(value As String)
+    End Sub
+    Partial Private Sub OnImageFotografChanged()
+    End Sub
+    Partial Private Sub OnMovieClipUrlChanging(value As String)
+    End Sub
+    Partial Private Sub OnMovieClipUrlChanged()
+    End Sub
+    Partial Private Sub OnMovieClipFilenameChanging(value As String)
+    End Sub
+    Partial Private Sub OnMovieClipFilenameChanged()
+    End Sub
+    Partial Private Sub OnMovieClipSizeChanging(value As String)
+    End Sub
+    Partial Private Sub OnMovieClipSizeChanged()
+    End Sub
+    Partial Private Sub OnMovieClipAltChanging(value As String)
+    End Sub
+    Partial Private Sub OnMovieClipAltChanged()
+    End Sub
+    Partial Private Sub OnMovieClipCreditsChanging(value As String)
+    End Sub
+    Partial Private Sub OnMovieClipCreditsChanged()
+    End Sub
+    Partial Private Sub OndatumChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OndatumChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Contentid", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property Contentid() As Integer
+		Get
+			Return Me._Contentid
+		End Get
+		Set
+			If ((Me._Contentid = value)  _
+						= false) Then
+				Me.OnContentidChanging(value)
+				Me.SendPropertyChanging
+				Me._Contentid = value
+				Me.SendPropertyChanged("Contentid")
+				Me.OnContentidChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
+	Public Property Rubrik() As String
+		Get
+			Return Me._Rubrik
+		End Get
+		Set
+			If (String.Equals(Me._Rubrik, value) = false) Then
+				Me.OnRubrikChanging(value)
+				Me.SendPropertyChanging
+				Me._Rubrik = value
+				Me.SendPropertyChanged("Rubrik")
+				Me.OnRubrikChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Underrubrik", DbType:="NVarChar(250)")>  _
+	Public Property Underrubrik() As String
+		Get
+			Return Me._Underrubrik
+		End Get
+		Set
+			If (String.Equals(Me._Underrubrik, value) = false) Then
+				Me.OnUnderrubrikChanging(value)
+				Me.SendPropertyChanging
+				Me._Underrubrik = value
+				Me.SendPropertyChanged("Underrubrik")
+				Me.OnUnderrubrikChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ContentText", DbType:="NVarChar(4000)")>  _
+	Public Property ContentText() As String
+		Get
+			Return Me._ContentText
+		End Get
+		Set
+			If (String.Equals(Me._ContentText, value) = false) Then
+				Me.OnContentTextChanging(value)
+				Me.SendPropertyChanging
+				Me._ContentText = value
+				Me.SendPropertyChanged("ContentText")
+				Me.OnContentTextChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ImageUrl", DbType:="NVarChar(1000)")>  _
+	Public Property ImageUrl() As String
+		Get
+			Return Me._ImageUrl
+		End Get
+		Set
+			If (String.Equals(Me._ImageUrl, value) = false) Then
+				Me.OnImageUrlChanging(value)
+				Me.SendPropertyChanging
+				Me._ImageUrl = value
+				Me.SendPropertyChanged("ImageUrl")
+				Me.OnImageUrlChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ImageFilename", DbType:="NVarChar(100)")>  _
+	Public Property ImageFilename() As String
+		Get
+			Return Me._ImageFilename
+		End Get
+		Set
+			If (String.Equals(Me._ImageFilename, value) = false) Then
+				Me.OnImageFilenameChanging(value)
+				Me.SendPropertyChanging
+				Me._ImageFilename = value
+				Me.SendPropertyChanged("ImageFilename")
+				Me.OnImageFilenameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ImageSize", DbType:="NVarChar(50)")>  _
+	Public Property ImageSize() As String
+		Get
+			Return Me._ImageSize
+		End Get
+		Set
+			If (String.Equals(Me._ImageSize, value) = false) Then
+				Me.OnImageSizeChanging(value)
+				Me.SendPropertyChanging
+				Me._ImageSize = value
+				Me.SendPropertyChanged("ImageSize")
+				Me.OnImageSizeChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ImageAlt", DbType:="NVarChar(150)")>  _
+	Public Property ImageAlt() As String
+		Get
+			Return Me._ImageAlt
+		End Get
+		Set
+			If (String.Equals(Me._ImageAlt, value) = false) Then
+				Me.OnImageAltChanging(value)
+				Me.SendPropertyChanging
+				Me._ImageAlt = value
+				Me.SendPropertyChanged("ImageAlt")
+				Me.OnImageAltChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ImageFotograf", DbType:="NVarChar(100)")>  _
+	Public Property ImageFotograf() As String
+		Get
+			Return Me._ImageFotograf
+		End Get
+		Set
+			If (String.Equals(Me._ImageFotograf, value) = false) Then
+				Me.OnImageFotografChanging(value)
+				Me.SendPropertyChanging
+				Me._ImageFotograf = value
+				Me.SendPropertyChanged("ImageFotograf")
+				Me.OnImageFotografChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MovieClipUrl", DbType:="NVarChar(1000)")>  _
+	Public Property MovieClipUrl() As String
+		Get
+			Return Me._MovieClipUrl
+		End Get
+		Set
+			If (String.Equals(Me._MovieClipUrl, value) = false) Then
+				Me.OnMovieClipUrlChanging(value)
+				Me.SendPropertyChanging
+				Me._MovieClipUrl = value
+				Me.SendPropertyChanged("MovieClipUrl")
+				Me.OnMovieClipUrlChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MovieClipFilename", DbType:="NVarChar(100)")>  _
+	Public Property MovieClipFilename() As String
+		Get
+			Return Me._MovieClipFilename
+		End Get
+		Set
+			If (String.Equals(Me._MovieClipFilename, value) = false) Then
+				Me.OnMovieClipFilenameChanging(value)
+				Me.SendPropertyChanging
+				Me._MovieClipFilename = value
+				Me.SendPropertyChanged("MovieClipFilename")
+				Me.OnMovieClipFilenameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MovieClipSize", DbType:="NVarChar(50)")>  _
+	Public Property MovieClipSize() As String
+		Get
+			Return Me._MovieClipSize
+		End Get
+		Set
+			If (String.Equals(Me._MovieClipSize, value) = false) Then
+				Me.OnMovieClipSizeChanging(value)
+				Me.SendPropertyChanging
+				Me._MovieClipSize = value
+				Me.SendPropertyChanged("MovieClipSize")
+				Me.OnMovieClipSizeChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MovieClipAlt", DbType:="NVarChar(150)")>  _
+	Public Property MovieClipAlt() As String
+		Get
+			Return Me._MovieClipAlt
+		End Get
+		Set
+			If (String.Equals(Me._MovieClipAlt, value) = false) Then
+				Me.OnMovieClipAltChanging(value)
+				Me.SendPropertyChanging
+				Me._MovieClipAlt = value
+				Me.SendPropertyChanged("MovieClipAlt")
+				Me.OnMovieClipAltChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MovieClipCredits", DbType:="NVarChar(100)")>  _
+	Public Property MovieClipCredits() As String
+		Get
+			Return Me._MovieClipCredits
+		End Get
+		Set
+			If (String.Equals(Me._MovieClipCredits, value) = false) Then
+				Me.OnMovieClipCreditsChanging(value)
+				Me.SendPropertyChanging
+				Me._MovieClipCredits = value
+				Me.SendPropertyChanged("MovieClipCredits")
+				Me.OnMovieClipCreditsChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_datum", DbType:="DateTime")>  _
+	Public Property datum() As System.Nullable(Of Date)
+		Get
+			Return Me._datum
+		End Get
+		Set
+			If (Me._datum.Equals(value) = false) Then
+				Me.OndatumChanging(value)
+				Me.SendPropertyChanging
+				Me._datum = value
+				Me.SendPropertyChanged("datum")
+				Me.OndatumChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_fakta")>  _
+Partial Public Class kk_aj_tbl_fakta
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _faktaid As Integer
+	
+	Private _arrid As System.Nullable(Of Integer)
+	
+	Private _faktatypid As System.Nullable(Of Integer)
+	
+	Private _faktaValue As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnfaktaidChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnfaktaidChanged()
+    End Sub
+    Partial Private Sub OnarridChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnarridChanged()
+    End Sub
+    Partial Private Sub OnfaktatypidChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnfaktatypidChanged()
+    End Sub
+    Partial Private Sub OnfaktaValueChanging(value As String)
+    End Sub
+    Partial Private Sub OnfaktaValueChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_faktaid", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property faktaid() As Integer
+		Get
+			Return Me._faktaid
+		End Get
+		Set
+			If ((Me._faktaid = value)  _
+						= false) Then
+				Me.OnfaktaidChanging(value)
+				Me.SendPropertyChanging
+				Me._faktaid = value
+				Me.SendPropertyChanged("faktaid")
+				Me.OnfaktaidChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrid", DbType:="Int")>  _
+	Public Property arrid() As System.Nullable(Of Integer)
+		Get
+			Return Me._arrid
+		End Get
+		Set
+			If (Me._arrid.Equals(value) = false) Then
+				Me.OnarridChanging(value)
+				Me.SendPropertyChanging
+				Me._arrid = value
+				Me.SendPropertyChanged("arrid")
+				Me.OnarridChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_faktatypid", DbType:="Int")>  _
+	Public Property faktatypid() As System.Nullable(Of Integer)
+		Get
+			Return Me._faktatypid
+		End Get
+		Set
+			If (Me._faktatypid.Equals(value) = false) Then
+				Me.OnfaktatypidChanging(value)
+				Me.SendPropertyChanging
+				Me._faktatypid = value
+				Me.SendPropertyChanged("faktatypid")
+				Me.OnfaktatypidChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_faktaValue", DbType:="NVarChar(450)")>  _
+	Public Property faktaValue() As String
+		Get
+			Return Me._faktaValue
+		End Get
+		Set
+			If (String.Equals(Me._faktaValue, value) = false) Then
+				Me.OnfaktaValueChanging(value)
+				Me.SendPropertyChanging
+				Me._faktaValue = value
+				Me.SendPropertyChanged("faktaValue")
+				Me.OnfaktaValueChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Users")>  _
+Partial Public Class User
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _UserID As Integer
+	
+	Private _Username As String
+	
+	Private _FirstName As String
+	
+	Private _LastName As String
+	
+	Private _IsSuperUser As Boolean
+	
+	Private _AffiliateId As System.Nullable(Of Integer)
+	
+	Private _Email As String
+	
+	Private _DisplayName As String
+	
+	Private _UpdatePassword As Boolean
+	
+	Private _LastIPAddress As String
+	
+	Private _IsDeleted As Boolean
+	
+	Private _CreatedByUserID As System.Nullable(Of Integer)
+	
+	Private _CreatedOnDate As System.Nullable(Of Date)
+	
+	Private _LastModifiedByUserID As System.Nullable(Of Integer)
+	
+	Private _LastModifiedOnDate As System.Nullable(Of Date)
+	
+	Private _PasswordResetToken As System.Nullable(Of System.Guid)
+	
+	Private _PasswordResetExpiration As System.Nullable(Of Date)
+	
+	Private _LowerEmail As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnUserIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUserIDChanged()
+    End Sub
+    Partial Private Sub OnUsernameChanging(value As String)
+    End Sub
+    Partial Private Sub OnUsernameChanged()
+    End Sub
+    Partial Private Sub OnFirstNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnFirstNameChanged()
+    End Sub
+    Partial Private Sub OnLastNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnLastNameChanged()
+    End Sub
+    Partial Private Sub OnIsSuperUserChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnIsSuperUserChanged()
+    End Sub
+    Partial Private Sub OnAffiliateIdChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnAffiliateIdChanged()
+    End Sub
+    Partial Private Sub OnEmailChanging(value As String)
+    End Sub
+    Partial Private Sub OnEmailChanged()
+    End Sub
+    Partial Private Sub OnDisplayNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnDisplayNameChanged()
+    End Sub
+    Partial Private Sub OnUpdatePasswordChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnUpdatePasswordChanged()
+    End Sub
+    Partial Private Sub OnLastIPAddressChanging(value As String)
+    End Sub
+    Partial Private Sub OnLastIPAddressChanged()
+    End Sub
+    Partial Private Sub OnIsDeletedChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnIsDeletedChanged()
+    End Sub
+    Partial Private Sub OnCreatedByUserIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCreatedByUserIDChanged()
+    End Sub
+    Partial Private Sub OnCreatedOnDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnCreatedOnDateChanged()
+    End Sub
+    Partial Private Sub OnLastModifiedByUserIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnLastModifiedByUserIDChanged()
+    End Sub
+    Partial Private Sub OnLastModifiedOnDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnLastModifiedOnDateChanged()
+    End Sub
+    Partial Private Sub OnPasswordResetTokenChanging(value As System.Nullable(Of System.Guid))
+    End Sub
+    Partial Private Sub OnPasswordResetTokenChanged()
+    End Sub
+    Partial Private Sub OnPasswordResetExpirationChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnPasswordResetExpirationChanged()
+    End Sub
+    Partial Private Sub OnLowerEmailChanging(value As String)
+    End Sub
+    Partial Private Sub OnLowerEmailChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property UserID() As Integer
+		Get
+			Return Me._UserID
+		End Get
+		Set
+			If ((Me._UserID = value)  _
+						= false) Then
+				Me.OnUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UserID = value
+				Me.SendPropertyChanged("UserID")
+				Me.OnUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me.OnUsernameChanging(value)
+				Me.SendPropertyChanging
+				Me._Username = value
+				Me.SendPropertyChanged("Username")
+				Me.OnUsernameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FirstName", DbType:="NVarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property FirstName() As String
+		Get
+			Return Me._FirstName
+		End Get
+		Set
+			If (String.Equals(Me._FirstName, value) = false) Then
+				Me.OnFirstNameChanging(value)
+				Me.SendPropertyChanging
+				Me._FirstName = value
+				Me.SendPropertyChanged("FirstName")
+				Me.OnFirstNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastName", DbType:="NVarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property LastName() As String
+		Get
+			Return Me._LastName
+		End Get
+		Set
+			If (String.Equals(Me._LastName, value) = false) Then
+				Me.OnLastNameChanging(value)
+				Me.SendPropertyChanging
+				Me._LastName = value
+				Me.SendPropertyChanged("LastName")
+				Me.OnLastNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsSuperUser", DbType:="Bit NOT NULL")>  _
+	Public Property IsSuperUser() As Boolean
+		Get
+			Return Me._IsSuperUser
+		End Get
+		Set
+			If ((Me._IsSuperUser = value)  _
+						= false) Then
+				Me.OnIsSuperUserChanging(value)
+				Me.SendPropertyChanging
+				Me._IsSuperUser = value
+				Me.SendPropertyChanged("IsSuperUser")
+				Me.OnIsSuperUserChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_AffiliateId", DbType:="Int")>  _
+	Public Property AffiliateId() As System.Nullable(Of Integer)
+		Get
+			Return Me._AffiliateId
+		End Get
+		Set
+			If (Me._AffiliateId.Equals(value) = false) Then
+				Me.OnAffiliateIdChanging(value)
+				Me.SendPropertyChanging
+				Me._AffiliateId = value
+				Me.SendPropertyChanged("AffiliateId")
+				Me.OnAffiliateIdChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Email", DbType:="NVarChar(256)")>  _
+	Public Property Email() As String
+		Get
+			Return Me._Email
+		End Get
+		Set
+			If (String.Equals(Me._Email, value) = false) Then
+				Me.OnEmailChanging(value)
+				Me.SendPropertyChanging
+				Me._Email = value
+				Me.SendPropertyChanged("Email")
+				Me.OnEmailChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DisplayName", DbType:="NVarChar(128) NOT NULL", CanBeNull:=false)>  _
+	Public Property DisplayName() As String
+		Get
+			Return Me._DisplayName
+		End Get
+		Set
+			If (String.Equals(Me._DisplayName, value) = false) Then
+				Me.OnDisplayNameChanging(value)
+				Me.SendPropertyChanging
+				Me._DisplayName = value
+				Me.SendPropertyChanged("DisplayName")
+				Me.OnDisplayNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UpdatePassword", DbType:="Bit NOT NULL")>  _
+	Public Property UpdatePassword() As Boolean
+		Get
+			Return Me._UpdatePassword
+		End Get
+		Set
+			If ((Me._UpdatePassword = value)  _
+						= false) Then
+				Me.OnUpdatePasswordChanging(value)
+				Me.SendPropertyChanging
+				Me._UpdatePassword = value
+				Me.SendPropertyChanged("UpdatePassword")
+				Me.OnUpdatePasswordChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastIPAddress", DbType:="NVarChar(50)")>  _
+	Public Property LastIPAddress() As String
+		Get
+			Return Me._LastIPAddress
+		End Get
+		Set
+			If (String.Equals(Me._LastIPAddress, value) = false) Then
+				Me.OnLastIPAddressChanging(value)
+				Me.SendPropertyChanging
+				Me._LastIPAddress = value
+				Me.SendPropertyChanged("LastIPAddress")
+				Me.OnLastIPAddressChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDeleted", DbType:="Bit NOT NULL")>  _
+	Public Property IsDeleted() As Boolean
+		Get
+			Return Me._IsDeleted
+		End Get
+		Set
+			If ((Me._IsDeleted = value)  _
+						= false) Then
+				Me.OnIsDeletedChanging(value)
+				Me.SendPropertyChanging
+				Me._IsDeleted = value
+				Me.SendPropertyChanged("IsDeleted")
+				Me.OnIsDeletedChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreatedByUserID", DbType:="Int")>  _
+	Public Property CreatedByUserID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CreatedByUserID
+		End Get
+		Set
+			If (Me._CreatedByUserID.Equals(value) = false) Then
+				Me.OnCreatedByUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CreatedByUserID = value
+				Me.SendPropertyChanged("CreatedByUserID")
+				Me.OnCreatedByUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreatedOnDate", DbType:="DateTime")>  _
+	Public Property CreatedOnDate() As System.Nullable(Of Date)
+		Get
+			Return Me._CreatedOnDate
+		End Get
+		Set
+			If (Me._CreatedOnDate.Equals(value) = false) Then
+				Me.OnCreatedOnDateChanging(value)
+				Me.SendPropertyChanging
+				Me._CreatedOnDate = value
+				Me.SendPropertyChanged("CreatedOnDate")
+				Me.OnCreatedOnDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastModifiedByUserID", DbType:="Int")>  _
+	Public Property LastModifiedByUserID() As System.Nullable(Of Integer)
+		Get
+			Return Me._LastModifiedByUserID
+		End Get
+		Set
+			If (Me._LastModifiedByUserID.Equals(value) = false) Then
+				Me.OnLastModifiedByUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._LastModifiedByUserID = value
+				Me.SendPropertyChanged("LastModifiedByUserID")
+				Me.OnLastModifiedByUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastModifiedOnDate", DbType:="DateTime")>  _
+	Public Property LastModifiedOnDate() As System.Nullable(Of Date)
+		Get
+			Return Me._LastModifiedOnDate
+		End Get
+		Set
+			If (Me._LastModifiedOnDate.Equals(value) = false) Then
+				Me.OnLastModifiedOnDateChanging(value)
+				Me.SendPropertyChanging
+				Me._LastModifiedOnDate = value
+				Me.SendPropertyChanged("LastModifiedOnDate")
+				Me.OnLastModifiedOnDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordResetToken", DbType:="UniqueIdentifier")>  _
+	Public Property PasswordResetToken() As System.Nullable(Of System.Guid)
+		Get
+			Return Me._PasswordResetToken
+		End Get
+		Set
+			If (Me._PasswordResetToken.Equals(value) = false) Then
+				Me.OnPasswordResetTokenChanging(value)
+				Me.SendPropertyChanging
+				Me._PasswordResetToken = value
+				Me.SendPropertyChanged("PasswordResetToken")
+				Me.OnPasswordResetTokenChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordResetExpiration", DbType:="DateTime")>  _
+	Public Property PasswordResetExpiration() As System.Nullable(Of Date)
+		Get
+			Return Me._PasswordResetExpiration
+		End Get
+		Set
+			If (Me._PasswordResetExpiration.Equals(value) = false) Then
+				Me.OnPasswordResetExpirationChanging(value)
+				Me.SendPropertyChanging
+				Me._PasswordResetExpiration = value
+				Me.SendPropertyChanged("PasswordResetExpiration")
+				Me.OnPasswordResetExpirationChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LowerEmail", AutoSync:=AutoSync.Always, DbType:="NVarChar(256)", IsDbGenerated:=true, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property LowerEmail() As String
+		Get
+			Return Me._LowerEmail
+		End Get
+		Set
+			If (String.Equals(Me._LowerEmail, value) = false) Then
+				Me.OnLowerEmailChanging(value)
+				Me.SendPropertyChanging
+				Me._LowerEmail = value
+				Me.SendPropertyChanged("LowerEmail")
+				Me.OnLowerEmailChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+Partial Public Class kk_aj_proc_GetArrby_ArrStatusResult
+	
+	Private _ArrID As Integer
+	
+	Private _Datum As System.Nullable(Of Date)
+	
+	Private _Rubrik As String
+	
+	Private _UnderRubrik As String
+	
+	Private _Publicerad As String
+	
+	Private _LookedAt As String
+	
+	Private _ArrangemangStatus As String
+	
+	Private _arrangemangtyp As String
+	
+	Private _konstform As String
+	
+	Private _Organisation As String
+	
+	Private _Username As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrID", DbType:="Int NOT NULL")>  _
+	Public Property ArrID() As Integer
+		Get
+			Return Me._ArrID
+		End Get
+		Set
+			If ((Me._ArrID = value)  _
+						= false) Then
+				Me._ArrID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Datum", DbType:="DateTime")>  _
+	Public Property Datum() As System.Nullable(Of Date)
+		Get
+			Return Me._Datum
+		End Get
+		Set
+			If (Me._Datum.Equals(value) = false) Then
+				Me._Datum = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
+	Public Property Rubrik() As String
+		Get
+			Return Me._Rubrik
+		End Get
+		Set
+			If (String.Equals(Me._Rubrik, value) = false) Then
+				Me._Rubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UnderRubrik", DbType:="NVarChar(250)")>  _
+	Public Property UnderRubrik() As String
+		Get
+			Return Me._UnderRubrik
+		End Get
+		Set
+			If (String.Equals(Me._UnderRubrik, value) = false) Then
+				Me._UnderRubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Publicerad", DbType:="NVarChar(10)")>  _
+	Public Property Publicerad() As String
+		Get
+			Return Me._Publicerad
+		End Get
+		Set
+			If (String.Equals(Me._Publicerad, value) = false) Then
+				Me._Publicerad = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LookedAt", DbType:="NVarChar(10)")>  _
+	Public Property LookedAt() As String
+		Get
+			Return Me._LookedAt
+		End Get
+		Set
+			If (String.Equals(Me._LookedAt, value) = false) Then
+				Me._LookedAt = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrangemangStatus", DbType:="NVarChar(50)")>  _
+	Public Property ArrangemangStatus() As String
+		Get
+			Return Me._ArrangemangStatus
+		End Get
+		Set
+			If (String.Equals(Me._ArrangemangStatus, value) = false) Then
+				Me._ArrangemangStatus = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrangemangtyp", DbType:="NVarChar(250)")>  _
+	Public Property arrangemangtyp() As String
+		Get
+			Return Me._arrangemangtyp
+		End Get
+		Set
+			If (String.Equals(Me._arrangemangtyp, value) = false) Then
+				Me._arrangemangtyp = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_konstform", DbType:="NVarChar(250)")>  _
+	Public Property konstform() As String
+		Get
+			Return Me._konstform
+		End Get
+		Set
+			If (String.Equals(Me._konstform, value) = false) Then
+				Me._konstform = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Organisation", DbType:="NVarChar(150)")>  _
+	Public Property Organisation() As String
+		Get
+			Return Me._Organisation
+		End Get
+		Set
+			If (String.Equals(Me._Organisation, value) = false) Then
+				Me._Organisation = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me._Username = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class kk_aj_proc_GetArrby_SearchResult
+	
+	Private _ArrID As Integer
+	
+	Private _Datum As System.Nullable(Of Date)
+	
+	Private _Rubrik As String
+	
+	Private _Underrubrik As String
+	
+	Private _Publicerad As String
+	
+	Private _LookedAt As String
+	
+	Private _ArrangemangStatus As String
+	
+	Private _konstform As String
+	
+	Private _Organisation As String
+	
+	Private _Username As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrID", DbType:="Int NOT NULL")>  _
+	Public Property ArrID() As Integer
+		Get
+			Return Me._ArrID
+		End Get
+		Set
+			If ((Me._ArrID = value)  _
+						= false) Then
+				Me._ArrID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Datum", DbType:="DateTime")>  _
+	Public Property Datum() As System.Nullable(Of Date)
+		Get
+			Return Me._Datum
+		End Get
+		Set
+			If (Me._Datum.Equals(value) = false) Then
+				Me._Datum = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
+	Public Property Rubrik() As String
+		Get
+			Return Me._Rubrik
+		End Get
+		Set
+			If (String.Equals(Me._Rubrik, value) = false) Then
+				Me._Rubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Underrubrik", DbType:="NVarChar(250)")>  _
+	Public Property Underrubrik() As String
+		Get
+			Return Me._Underrubrik
+		End Get
+		Set
+			If (String.Equals(Me._Underrubrik, value) = false) Then
+				Me._Underrubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Publicerad", DbType:="NVarChar(10)")>  _
+	Public Property Publicerad() As String
+		Get
+			Return Me._Publicerad
+		End Get
+		Set
+			If (String.Equals(Me._Publicerad, value) = false) Then
+				Me._Publicerad = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LookedAt", DbType:="NVarChar(10)")>  _
+	Public Property LookedAt() As String
+		Get
+			Return Me._LookedAt
+		End Get
+		Set
+			If (String.Equals(Me._LookedAt, value) = false) Then
+				Me._LookedAt = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrangemangStatus", DbType:="NVarChar(50)")>  _
+	Public Property ArrangemangStatus() As String
+		Get
+			Return Me._ArrangemangStatus
+		End Get
+		Set
+			If (String.Equals(Me._ArrangemangStatus, value) = false) Then
+				Me._ArrangemangStatus = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_konstform", DbType:="NVarChar(250)")>  _
+	Public Property konstform() As String
+		Get
+			Return Me._konstform
+		End Get
+		Set
+			If (String.Equals(Me._konstform, value) = false) Then
+				Me._konstform = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Organisation", DbType:="NVarChar(150)")>  _
+	Public Property Organisation() As String
+		Get
+			Return Me._Organisation
+		End Get
+		Set
+			If (String.Equals(Me._Organisation, value) = false) Then
+				Me._Organisation = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me._Username = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class kk_aj_proc_getlogResult
+	
+	Private _logid As Integer
+	
+	Private _logtyp As String
+	
+	Private _statustyp As String
+	
+	Private _beskrivning As String
+	
+	Private _datum As System.Nullable(Of Date)
+	
+	Private _Username As String
+	
+	Private _arrid As System.Nullable(Of Integer)
+	
+	Private _logtypid As System.Nullable(Of Integer)
+	
+	Private _statusid As System.Nullable(Of Integer)
+	
+	Private _changebyuserid As System.Nullable(Of Integer)
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_logid", DbType:="Int NOT NULL")>  _
+	Public Property logid() As Integer
+		Get
+			Return Me._logid
+		End Get
+		Set
+			If ((Me._logid = value)  _
+						= false) Then
+				Me._logid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_logtyp", DbType:="NVarChar(50)")>  _
+	Public Property logtyp() As String
+		Get
+			Return Me._logtyp
+		End Get
+		Set
+			If (String.Equals(Me._logtyp, value) = false) Then
+				Me._logtyp = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_statustyp", DbType:="NVarChar(50)")>  _
+	Public Property statustyp() As String
+		Get
+			Return Me._statustyp
+		End Get
+		Set
+			If (String.Equals(Me._statustyp, value) = false) Then
+				Me._statustyp = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_beskrivning", DbType:="NVarChar(4000)")>  _
+	Public Property beskrivning() As String
+		Get
+			Return Me._beskrivning
+		End Get
+		Set
+			If (String.Equals(Me._beskrivning, value) = false) Then
+				Me._beskrivning = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_datum", DbType:="DateTime")>  _
+	Public Property datum() As System.Nullable(Of Date)
+		Get
+			Return Me._datum
+		End Get
+		Set
+			If (Me._datum.Equals(value) = false) Then
+				Me._datum = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me._Username = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrid", DbType:="Int")>  _
+	Public Property arrid() As System.Nullable(Of Integer)
+		Get
+			Return Me._arrid
+		End Get
+		Set
+			If (Me._arrid.Equals(value) = false) Then
+				Me._arrid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_logtypid", DbType:="Int")>  _
+	Public Property logtypid() As System.Nullable(Of Integer)
+		Get
+			Return Me._logtypid
+		End Get
+		Set
+			If (Me._logtypid.Equals(value) = false) Then
+				Me._logtypid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_statusid", DbType:="Int")>  _
+	Public Property statusid() As System.Nullable(Of Integer)
+		Get
+			Return Me._statusid
+		End Get
+		Set
+			If (Me._statusid.Equals(value) = false) Then
+				Me._statusid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_changebyuserid", DbType:="Int")>  _
+	Public Property changebyuserid() As System.Nullable(Of Integer)
+		Get
+			Return Me._changebyuserid
+		End Get
+		Set
+			If (Me._changebyuserid.Equals(value) = false) Then
+				Me._changebyuserid = value
+			End If
+		End Set
+	End Property
 End Class
