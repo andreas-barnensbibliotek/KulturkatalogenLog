@@ -4,6 +4,7 @@
         arr = 1
         logtyp = 2
         status = 3
+        alla = 4
     End Enum
 
     Public Function getlogEvent(commandtyp As String, param As logInfo) As List(Of logInfo)
@@ -21,6 +22,8 @@
             Case "byuser"
             Case "byutovare"
             Case "bylogid"
+            Case "all"
+                ret = _dalobj.getannonslog(proctypes.alla, 0)
         End Select
 
         Return ret

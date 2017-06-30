@@ -7,3 +7,4 @@ D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.vbproj.G
 D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.dll
 D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.xml
 D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.pdb
+D:\devprojekt\libraries\KulturkatalogenLog\obj\Debug\KulturkatalogenLog.vbprojResolveAssemblyReference.cache

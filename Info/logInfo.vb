@@ -6,12 +6,14 @@
     Private _datum As Date
     Private _arrid As Integer
     Private _arrrubrik As String
+    Private _arrutovareID As Integer
     Private _arrutovare As String
     Private _beskrivning As String
     Private _changebyuserid As Integer
     Private _ChangebyUsernamn As String
     Private _statustypid As Integer
     Private _statustyp As String
+    Private _currentArrStatus As String
 
     Public Sub New()
         _logid = 0
@@ -20,12 +22,14 @@
         _datum = Date.Now
         _arrid = 0
         _arrrubrik = ""
+        _arrutovareID = 0
         _arrutovare = ""
         _changebyuserid = 0
         _ChangebyUsernamn = ""
         _statustypid = 0
         _statustyp = ""
         _beskrivning = ""
+        _currentArrStatus = ""
     End Sub
     Public Property logid() As Integer
         Get
@@ -70,6 +74,15 @@
         End Get
         Set(ByVal value As String)
             _arrrubrik = value
+        End Set
+    End Property
+
+    Public Property ArrutovareID() As Integer
+        Get
+            Return _arrutovareID
+        End Get
+        Set(ByVal value As Integer)
+            _arrutovareID = value
         End Set
     End Property
 
@@ -133,6 +146,16 @@
         End Get
         Set(ByVal value As String)
             _beskrivning = value
+        End Set
+    End Property
+
+
+    Public Property CurrentArrStatus() As String
+        Get
+            Return _currentArrStatus
+        End Get
+        Set(ByVal value As String)
+            _currentArrStatus = value
         End Set
     End Property
 End Class

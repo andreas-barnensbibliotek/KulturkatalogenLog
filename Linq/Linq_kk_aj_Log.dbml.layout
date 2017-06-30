@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Linq_kk_aj_Log">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="Linq_kk_aj_Log">
   <DataContextMoniker Name="/Linq_kk_aj_LogDataContext" />
   <nestedChildShapes>
     <classShape Id="d7a5849c-5ddb-451a-862b-bf88c80cfe7d" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
@@ -36,6 +36,12 @@
       <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/User" />
       <nestedChildShapes>
         <elementListCompartment Id="76315770-12ca-40bc-bc44-27ae8784d161" absoluteBounds="5.015, 2.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33830517-9e67-4084-a4d6-2d1e2af534c2" absoluteBounds="0.5, 6.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/Linq_kk_aj_LogDataContext/kk_aj_tbl_Utovare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bccd9cef-1d0a-4122-9ddf-0ba7d507177a" absoluteBounds="0.51500000000000012, 6.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

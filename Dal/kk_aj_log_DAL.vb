@@ -26,10 +26,11 @@ Public Class kk_aj_log_DAL
             nobj.logid = t.logid
             nobj.logtypid = t.logtypid
             nobj.logtyp = t.logtyp
-            Dim arrobj As arrangemangInfo = getarrdata(t.arrid)
-            nobj.Arrid = arrobj.Arrid
-            nobj.Arrrubrik = arrobj.Rubrik
-            nobj.Arrutovare = "to set"
+            nobj.Arrid = t.arrid
+            nobj.Arrrubrik = t.Rubrik
+            nobj.CurrentArrStatus = t.statustyp
+            nobj.Arrutovare = t.Organisation
+            nobj.ArrutovareID = t.UtovarID
             nobj.Statustypid = t.statusid
             nobj.ChangebyUserid = t.changebyuserid
             nobj.ChangebyUsernamn = getusername(t.changebyuserid)
@@ -43,19 +44,7 @@ Public Class kk_aj_log_DAL
         Return tmpobj
     End Function
 
-    Private Function getarrdata(arrid As Integer) As arrangemangInfo
-        Dim tmpobj As New arrangemangInfo
 
-        Dim logs = From t In _linqObj.kk_aj_tbl_Arrangemangs
-                   Where t.arrid = arrid
-                   Select t
-
-        For Each t In logs
-            tmpobj.Arrid = t.ArrID
-        Next
-        Return tmpobj
-
-    End Function
 
 
     Private Function getusername(userid As Integer) As String

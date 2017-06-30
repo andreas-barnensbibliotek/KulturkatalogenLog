@@ -67,6 +67,12 @@ Partial Public Class Linq_kk_aj_LogDataContext
     End Sub
   Partial Private Sub DeleteUser(instance As User)
     End Sub
+  Partial Private Sub Insertkk_aj_tbl_Utovare(instance As kk_aj_tbl_Utovare)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_Utovare(instance As kk_aj_tbl_Utovare)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_Utovare(instance As kk_aj_tbl_Utovare)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -127,6 +133,12 @@ Partial Public Class Linq_kk_aj_LogDataContext
 	Public ReadOnly Property Users() As System.Data.Linq.Table(Of User)
 		Get
 			Return Me.GetTable(Of User)
+		End Get
+	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_Utovares() As System.Data.Linq.Table(Of kk_aj_tbl_Utovare)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_Utovare)
 		End Get
 	End Property
 	
@@ -1712,6 +1724,310 @@ Partial Public Class User
 	End Sub
 End Class
 
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_Utovare")>  _
+Partial Public Class kk_aj_tbl_Utovare
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _UtovarID As Integer
+	
+	Private _Organisation As String
+	
+	Private _Fornamn As String
+	
+	Private _Efternamn As String
+	
+	Private _Telefonnummer As String
+	
+	Private _Adress As String
+	
+	Private _Postnr As String
+	
+	Private _Ort As String
+	
+	Private _Epost As String
+	
+	Private _Kommun As String
+	
+	Private _Hemsida As String
+	
+	Private _Ovrigt As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnUtovarIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUtovarIDChanged()
+    End Sub
+    Partial Private Sub OnOrganisationChanging(value As String)
+    End Sub
+    Partial Private Sub OnOrganisationChanged()
+    End Sub
+    Partial Private Sub OnFornamnChanging(value As String)
+    End Sub
+    Partial Private Sub OnFornamnChanged()
+    End Sub
+    Partial Private Sub OnEfternamnChanging(value As String)
+    End Sub
+    Partial Private Sub OnEfternamnChanged()
+    End Sub
+    Partial Private Sub OnTelefonnummerChanging(value As String)
+    End Sub
+    Partial Private Sub OnTelefonnummerChanged()
+    End Sub
+    Partial Private Sub OnAdressChanging(value As String)
+    End Sub
+    Partial Private Sub OnAdressChanged()
+    End Sub
+    Partial Private Sub OnPostnrChanging(value As String)
+    End Sub
+    Partial Private Sub OnPostnrChanged()
+    End Sub
+    Partial Private Sub OnOrtChanging(value As String)
+    End Sub
+    Partial Private Sub OnOrtChanged()
+    End Sub
+    Partial Private Sub OnEpostChanging(value As String)
+    End Sub
+    Partial Private Sub OnEpostChanged()
+    End Sub
+    Partial Private Sub OnKommunChanging(value As String)
+    End Sub
+    Partial Private Sub OnKommunChanged()
+    End Sub
+    Partial Private Sub OnHemsidaChanging(value As String)
+    End Sub
+    Partial Private Sub OnHemsidaChanged()
+    End Sub
+    Partial Private Sub OnOvrigtChanging(value As String)
+    End Sub
+    Partial Private Sub OnOvrigtChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UtovarID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property UtovarID() As Integer
+		Get
+			Return Me._UtovarID
+		End Get
+		Set
+			If ((Me._UtovarID = value)  _
+						= false) Then
+				Me.OnUtovarIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UtovarID = value
+				Me.SendPropertyChanged("UtovarID")
+				Me.OnUtovarIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Organisation", DbType:="NVarChar(150)")>  _
+	Public Property Organisation() As String
+		Get
+			Return Me._Organisation
+		End Get
+		Set
+			If (String.Equals(Me._Organisation, value) = false) Then
+				Me.OnOrganisationChanging(value)
+				Me.SendPropertyChanging
+				Me._Organisation = value
+				Me.SendPropertyChanged("Organisation")
+				Me.OnOrganisationChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Fornamn", DbType:="NVarChar(70)")>  _
+	Public Property Fornamn() As String
+		Get
+			Return Me._Fornamn
+		End Get
+		Set
+			If (String.Equals(Me._Fornamn, value) = false) Then
+				Me.OnFornamnChanging(value)
+				Me.SendPropertyChanging
+				Me._Fornamn = value
+				Me.SendPropertyChanged("Fornamn")
+				Me.OnFornamnChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Efternamn", DbType:="NVarChar(70)")>  _
+	Public Property Efternamn() As String
+		Get
+			Return Me._Efternamn
+		End Get
+		Set
+			If (String.Equals(Me._Efternamn, value) = false) Then
+				Me.OnEfternamnChanging(value)
+				Me.SendPropertyChanging
+				Me._Efternamn = value
+				Me.SendPropertyChanged("Efternamn")
+				Me.OnEfternamnChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Telefonnummer", DbType:="NVarChar(50)")>  _
+	Public Property Telefonnummer() As String
+		Get
+			Return Me._Telefonnummer
+		End Get
+		Set
+			If (String.Equals(Me._Telefonnummer, value) = false) Then
+				Me.OnTelefonnummerChanging(value)
+				Me.SendPropertyChanging
+				Me._Telefonnummer = value
+				Me.SendPropertyChanged("Telefonnummer")
+				Me.OnTelefonnummerChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Adress", DbType:="NVarChar(70)")>  _
+	Public Property Adress() As String
+		Get
+			Return Me._Adress
+		End Get
+		Set
+			If (String.Equals(Me._Adress, value) = false) Then
+				Me.OnAdressChanging(value)
+				Me.SendPropertyChanging
+				Me._Adress = value
+				Me.SendPropertyChanged("Adress")
+				Me.OnAdressChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Postnr", DbType:="NVarChar(10)")>  _
+	Public Property Postnr() As String
+		Get
+			Return Me._Postnr
+		End Get
+		Set
+			If (String.Equals(Me._Postnr, value) = false) Then
+				Me.OnPostnrChanging(value)
+				Me.SendPropertyChanging
+				Me._Postnr = value
+				Me.SendPropertyChanged("Postnr")
+				Me.OnPostnrChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ort", DbType:="NVarChar(80)")>  _
+	Public Property Ort() As String
+		Get
+			Return Me._Ort
+		End Get
+		Set
+			If (String.Equals(Me._Ort, value) = false) Then
+				Me.OnOrtChanging(value)
+				Me.SendPropertyChanging
+				Me._Ort = value
+				Me.SendPropertyChanged("Ort")
+				Me.OnOrtChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Epost", DbType:="NVarChar(150)")>  _
+	Public Property Epost() As String
+		Get
+			Return Me._Epost
+		End Get
+		Set
+			If (String.Equals(Me._Epost, value) = false) Then
+				Me.OnEpostChanging(value)
+				Me.SendPropertyChanging
+				Me._Epost = value
+				Me.SendPropertyChanged("Epost")
+				Me.OnEpostChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Kommun", DbType:="NVarChar(80)")>  _
+	Public Property Kommun() As String
+		Get
+			Return Me._Kommun
+		End Get
+		Set
+			If (String.Equals(Me._Kommun, value) = false) Then
+				Me.OnKommunChanging(value)
+				Me.SendPropertyChanging
+				Me._Kommun = value
+				Me.SendPropertyChanged("Kommun")
+				Me.OnKommunChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Hemsida", DbType:="NVarChar(250)")>  _
+	Public Property Hemsida() As String
+		Get
+			Return Me._Hemsida
+		End Get
+		Set
+			If (String.Equals(Me._Hemsida, value) = false) Then
+				Me.OnHemsidaChanging(value)
+				Me.SendPropertyChanging
+				Me._Hemsida = value
+				Me.SendPropertyChanged("Hemsida")
+				Me.OnHemsidaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ovrigt", DbType:="NVarChar(250)")>  _
+	Public Property Ovrigt() As String
+		Get
+			Return Me._Ovrigt
+		End Get
+		Set
+			If (String.Equals(Me._Ovrigt, value) = false) Then
+				Me.OnOvrigtChanging(value)
+				Me.SendPropertyChanging
+				Me._Ovrigt = value
+				Me.SendPropertyChanged("Ovrigt")
+				Me.OnOvrigtChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
 Partial Public Class kk_aj_proc_GetArrby_ArrStatusResult
 	
 	Private _ArrID As Integer
@@ -2044,6 +2360,20 @@ Partial Public Class kk_aj_proc_getlogResult
 	
 	Private _changebyuserid As System.Nullable(Of Integer)
 	
+	Private _Rubrik As String
+	
+	Private _Underrubrik As String
+	
+	Private _ContentText As String
+	
+	Private _Version As System.Nullable(Of Integer)
+	
+	Private _id As Integer
+	
+	Private _Organisation As String
+	
+	Private _UtovarID As System.Nullable(Of Integer)
+	
 	Public Sub New()
 		MyBase.New
 	End Sub
@@ -2165,6 +2495,91 @@ Partial Public Class kk_aj_proc_getlogResult
 		Set
 			If (Me._changebyuserid.Equals(value) = false) Then
 				Me._changebyuserid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Rubrik", DbType:="NVarChar(250)")>  _
+	Public Property Rubrik() As String
+		Get
+			Return Me._Rubrik
+		End Get
+		Set
+			If (String.Equals(Me._Rubrik, value) = false) Then
+				Me._Rubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Underrubrik", DbType:="NVarChar(250)")>  _
+	Public Property Underrubrik() As String
+		Get
+			Return Me._Underrubrik
+		End Get
+		Set
+			If (String.Equals(Me._Underrubrik, value) = false) Then
+				Me._Underrubrik = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ContentText", DbType:="NVarChar(4000)")>  _
+	Public Property ContentText() As String
+		Get
+			Return Me._ContentText
+		End Get
+		Set
+			If (String.Equals(Me._ContentText, value) = false) Then
+				Me._ContentText = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Version", DbType:="Int")>  _
+	Public Property Version() As System.Nullable(Of Integer)
+		Get
+			Return Me._Version
+		End Get
+		Set
+			If (Me._Version.Equals(value) = false) Then
+				Me._Version = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="Int NOT NULL")>  _
+	Public Property id() As Integer
+		Get
+			Return Me._id
+		End Get
+		Set
+			If ((Me._id = value)  _
+						= false) Then
+				Me._id = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Organisation", DbType:="NVarChar(150)")>  _
+	Public Property Organisation() As String
+		Get
+			Return Me._Organisation
+		End Get
+		Set
+			If (String.Equals(Me._Organisation, value) = false) Then
+				Me._Organisation = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UtovarID", DbType:="Int")>  _
+	Public Property UtovarID() As System.Nullable(Of Integer)
+		Get
+			Return Me._UtovarID
+		End Get
+		Set
+			If (Me._UtovarID.Equals(value) = false) Then
+				Me._UtovarID = value
 			End If
 		End Set
 	End Property
