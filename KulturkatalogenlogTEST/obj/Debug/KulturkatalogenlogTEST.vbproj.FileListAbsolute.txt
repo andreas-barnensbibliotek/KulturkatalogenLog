@@ -2,11 +2,11 @@ D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\Kult
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenlogTEST.pdb
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenlogTEST.xml
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenLog.dll
-D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenLog.pdb
-D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenLog.xml
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.Resources.resources
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.dll
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.xml
 D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\obj\Debug\KulturkatalogenlogTEST.pdb
+D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenLog.pdb
+D:\devprojekt\libraries\KulturkatalogenLog\KulturkatalogenlogTEST\bin\Debug\KulturkatalogenLog.xml
