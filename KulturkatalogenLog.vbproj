@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\getEventlogController.vb" />
+    <Compile Include="Dal\connectionstringHandler.vb" />
     <Compile Include="Dal\kk_aj_log_DAL.vb" />
     <Compile Include="Info\arrangemangInfo.vb" />
     <Compile Include="Info\logInfo.vb" />
